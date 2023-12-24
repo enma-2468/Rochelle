@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Function to handle the click event of the "Log In" button
+      function handleLogin() {
+        // Check the username and password here
+        var usernameInput = document.querySelector('input[name="username"]');
+        var passwordInput = document.querySelector('input[name="password"]');
+        
+        var username = usernameInput.value;
+        var password = passwordInput.value;
+
+        // Assuming you want to check for the specific username and password
+        if (username === 'Pakwan' && password === 'nitro cold brew') {
+          // Redirect to index.html if the credentials are correct
+          window.location.href = 'index.html';
+        } else {
+          // Handle incorrect credentials (you can show an error message, etc.)
+          alert('Incorrect username or password');
+
+          // Reset the form to clear the input values on unsuccessful login
+          document.querySelector('.form').reset();
+        }
+      }
+
+      // Attach the click event listener to the "Log In" button
+      document.querySelector('.btn').addEventListener('click', handleLogin);
+    });
+  </script>
+</head>
+<body>
+<form autocomplete='off' class='form'>
+  <div class='control'>
+    <h1>
+      Sign In
+    </h1>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='username' placeholder='Username' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='password' placeholder='Password' type='password'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <button class='btn block-cube block-cube-hover' type='button'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='text'>
+      Log In
+    </div>
+  </button>
+  <div class='credits'>
+    <a>
+      Username: Pakwan 
+      <br>
+      Password Hint: Favorite coffee of Ms. Rochelle (not the second fave and small letters with space:>)
+    </a>
+  </div>
+</form>
+</body>
+</html>
